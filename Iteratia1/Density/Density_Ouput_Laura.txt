@@ -1,0 +1,4 @@
+Shape: (150, 5)
+Estimated number of clusters: 2
+Estimated number of noise points: 0
+Silhouette Coefficient: 0.687
