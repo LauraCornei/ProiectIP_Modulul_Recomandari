@@ -1,5 +1,5 @@
 # ProiectIP_Modulul_Recomandari
-Modulul_Recomandari- iteratia 1
+## Iteratia 1
 
 Am testat diversi algoritmi de ML de invatare nesupervizata: Kmeans, Hierarchical, Density based si subcategorii ale lor, 
 precum si algoritmi de invatare supervizata (KNeighboursClassifier). Am realizat grafice, diagrame, rapoarte legate de performanta
