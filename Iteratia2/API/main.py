@@ -7,7 +7,7 @@ app.config["DEBUG"] = True
 
 @app.after_request
 def func(response):
-    response.headers["Content-type"] = "text/json"
+    response.headers["Content-type"] = "application/json"
     return response
 
 RecommendationController.RecommendationController.register(app,  route_base='/recommendation')
