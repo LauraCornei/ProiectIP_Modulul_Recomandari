@@ -128,11 +128,13 @@
           description: 'Restaurant description',
         },
       ];
-
-
       window.app = new Vue({
         el: '#app',
         data: {
+          window: {
+            width: 0,
+            height: 0
+          },
           rawData: data,
           search: '',
           slide: 0,
@@ -140,9 +142,25 @@
         },
         computed: {
           carouselSections: function () {
-            return _.chunk(this.rawData, 3);
+            if(this.window.width > 1500)
+              return _.chunk(this.rawData, 4);
+            else if(this.window.width > 780)
+              return _.chunk(this.rawData, 3);
+            else if(this.window.width > 400)
+              return _.chunk(this.rawData, 2);
+            else  
+              return _.chunk(this.rawData, 1);
           },
         },
+
+        created() {
+          window.addEventListener('resize', this.handleResize);
+          this.handleResize();
+        },
+        destroyed() {
+          window.removeEventListener('resize', this.handleResize);
+        },
+
         methods: {
           async submitForm(e) {
             e.preventDefault();
@@ -161,6 +179,11 @@
               `http://localhost:5000/recommendations/restaurant/${userId}`
             ).then((res) => res.json());
           },
+          
+          handleResize() {
+            this.window.width = window.innerWidth;
+            this.window.height = window.innerHeight;
+          },
 
           onSlideStart(slide) {
             this.sliding = true
@@ -170,6 +193,7 @@
           }
         },
       });
+
     </script>
 
     <style>
@@ -193,12 +217,31 @@
         width: 100%;
         text-shadow: 1px 1px 2px #333;
       }
-      .card-style{
-        width: 30%; 
+
+      .card-style{ 
+        width: 30%;
         display: inline-block;
         margin-left: 2.5%;
       }
-      
+
+      @media screen and (min-width: 1500px) {
+        .card-style {
+          width: 22%;
+        }
+      }
+
+      @media screen and (max-width: 780px) {
+        .card-style {
+          width: 47%;
+        }
+      }
+
+      @media screen and (max-width: 400px) {
+        .card-style {
+          width: 100%;
+        }
+      }
+
     </style>
 
 
