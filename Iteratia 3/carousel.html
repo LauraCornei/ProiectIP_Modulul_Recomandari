@@ -39,6 +39,7 @@
           id="carousel-1"
           v-model="slide"
           :interval="2000"
+          controls
           fade
           img-width="1024"
           img-height="480"
@@ -64,7 +65,7 @@
 
                 <template v-slot:footer>
                   <div class="text-center">
-                    <b-button pill href="#" class="btn btn-secondary">Restaurant page</b-button>
+                    <b-button pill href="#">Restaurant page</b-button>
                   </div>
                 </template>
                 
@@ -146,7 +147,7 @@
               return _.chunk(this.rawData, 4);
             else if(this.window.width > 780)
               return _.chunk(this.rawData, 3);
-            else if(this.window.width > 400)
+            else if(this.window.width > 420)
               return _.chunk(this.rawData, 2);
             else  
               return _.chunk(this.rawData, 1);
@@ -219,28 +220,67 @@
       }
 
       .card-style{ 
-        width: 30%;
+        width: 28%;
         display: inline-block;
-        margin-left: 2.5%;
+        margin-left: 4.0%;
       }
 
       @media screen and (min-width: 1500px) {
         .card-style {
-          width: 22%;
+          width: 20%;
+          margin-left: 4.0%;
         }
       }
 
       @media screen and (max-width: 780px) {
         .card-style {
-          width: 47%;
+          width: 44%;
+          margin-left: 4.0% ;
         }
       }
 
-      @media screen and (max-width: 400px) {
+      @media screen and (max-width: 420px) {
         .card-style {
-          width: 100%;
+          width: 95%;
+          margin-left: 2%;
         }
+      
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        display: none;
+       }
+
       }
+
+      .carousel-control-next, .carousel-control-prev{
+        width: 3%;  
+        opacity: 1;
+      }
+
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        background-image: none;
+        background-color: #a71d31;
+      }
+
+
+    .carousel-control-next-icon:after
+    {
+      content: '>';
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .carousel-control-prev-icon:after {
+      content: '<';
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+    }
 
     </style>
 
