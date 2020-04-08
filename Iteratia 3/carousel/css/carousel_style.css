@@ -1,0 +1,83 @@
+.carousel-style {
+    width: 100%;
+    text-shadow: 1px 1px 2px #333;
+}
+
+.carousel-control-next, .carousel-control-prev{
+    width: 4%;
+    opacity: 0.9;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    width: 30px;
+    height: 30px;
+}
+
+
+.carousel-control-prev-icon{
+    background-image: url("../resources/images/left_arrow.png");
+}
+.carousel-control-next-icon{
+    background-image: url("../resources/images/right_arrow.png");
+}
+.carousel-control-prev-icon:hover{
+    background-image: url("../resources/images/left_arrow_hover.png");
+}
+.carousel-control-next-icon:hover{
+    background-image: url("../resources/images/right_arrow_hover.png");
+}
+
+
+.card-style{
+    width: 28%;
+    display: inline-block;
+    margin-left: 4.0%;
+}
+
+.card{
+    text-align: center;
+    background-color: #2b2633;
+}
+
+.btn-secondary{
+    background-color: #a71d31;
+    border: #a71d31;
+    color: white;
+}
+
+.btn-secondary:hover{
+    background-color:#bf2239;
+}
+
+@media screen and (min-width: 1500px) {
+    .card-style {
+        width: 20%;
+        margin-left: 4.0%;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .card-style {
+        width: 43%;
+        margin-left: 4.5% ;
+    }
+
+    .carousel-control-prev-icon, .carousel-control-next-icon{
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .card-style {
+        width: 87%;
+        margin-left: 6%;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        display: none;
+    }
+
+}
+
