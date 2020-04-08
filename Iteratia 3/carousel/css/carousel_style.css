@@ -10,6 +10,12 @@
     --color-palette-mocasin-hover: rgba(241, 231, 223, 1);
     --color-palette-orange-hover: rgba(255, 177, 158, 1);
     --color-palette-red-hover: rgba(218, 47, 73, 1);    
+
+    --carousel-controllers-color: var(--color-palette-green);
+    --carousel-controllers-color-hover: var(--color-palette-green-hover);
+    --card-background-color: var(--color-palette-black);
+    --card-button-color: var(--color-palette-red);
+    --card-button-color-hover: var(--color-palette-red-hover);
 }
 
 .carousel-style {
@@ -25,29 +31,16 @@
 .carousel-control-prev-icon, .carousel-control-next-icon{
     width: 30px;
     height: 30px;
+    background-color: var(--carousel-controllers-color);
+    border-radius: 50%;
+    border: 5px solid var(--carousel-controllers-color);
 }
 
-.carousel-control-prev-icon{  
-    background-color: var(--color-palette-red);
+.carousel-control-prev-icon:hover, .carousel-control-next-icon:hover{
+    background-color: var(--carousel-controllers-color-hover);
     border-radius: 50%;
-    border: 5px solid var(--color-palette-red);
+    border: 5px solid var(--carousel-controllers-color-hover);
 }
-.carousel-control-next-icon{
-    background-color: var(--color-palette-red);
-    border-radius: 50%;
-    border: 5px solid var(--color-palette-red);
-}
-.carousel-control-prev-icon:hover{
-    background-color: var(--color-palette-red-hover);
-    border-radius: 50%;
-    border: 5px solid var(--color-palette-red-hover);
-}
-.carousel-control-next-icon:hover{
-    background-color: var(--color-palette-red-hover);
-    border-radius: 50%;
-    border: 5px solid var(--color-palette-red-hover);
-}
-
 
 .card-style{
     width: 28%;
@@ -57,17 +50,17 @@
 
 .card{
     text-align: center;
-    background-color: var(--color-palette-black);
+    background-color: var(--card-background-color);
 }
 
 .btn-secondary{
-    background-color: var(--color-palette-red);
-    border: var(--color-palette-red);
+    background-color: var(--card-button-color);
+    border: var(--card-button-color);
     color: white;
 }
 
 .btn-secondary:hover{
-    background-color: var(--color-palette-red-hover);
+    background-color: var(--card-button-color-hover);
 }
 
 @media screen and (min-width: 1500px) {
