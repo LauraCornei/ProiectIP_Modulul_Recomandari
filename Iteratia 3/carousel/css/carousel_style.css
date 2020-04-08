@@ -1,3 +1,17 @@
+:root{
+    --color-palette-black: rgba(43, 38, 51, 1);
+    --color-palette-green: rgba(56, 97, 80, 1);
+    --color-palette-mocasin: rgba(247, 231, 217, 1);
+    --color-palette-orange: rgba(255, 142, 114, 1);
+    --color-palette-red: rgba(167, 29, 49, 1);
+
+    --color-palette-black-hover: rgba(69, 61, 82, 1);
+    --color-palette-green-hover: rgba(69, 120, 99, 1);
+    --color-palette-mocasin-hover: rgba(241, 231, 223, 1);
+    --color-palette-orange-hover: rgba(255, 177, 158, 1);
+    --color-palette-red-hover: rgba(218, 47, 73, 1);    
+}
+
 .carousel-style {
     width: 100%;
     text-shadow: 1px 1px 2px #333;
@@ -5,7 +19,7 @@
 
 .carousel-control-next, .carousel-control-prev{
     width: 4%;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 .carousel-control-prev-icon, .carousel-control-next-icon{
@@ -13,18 +27,25 @@
     height: 30px;
 }
 
-
-.carousel-control-prev-icon{
-    background-image: url("../resources/images/left_arrow.png");
+.carousel-control-prev-icon{  
+    background-color: var(--color-palette-red);
+    border-radius: 50%;
+    border: 5px solid var(--color-palette-red);
 }
 .carousel-control-next-icon{
-    background-image: url("../resources/images/right_arrow.png");
+    background-color: var(--color-palette-red);
+    border-radius: 50%;
+    border: 5px solid var(--color-palette-red);
 }
 .carousel-control-prev-icon:hover{
-    background-image: url("../resources/images/left_arrow_hover.png");
+    background-color: var(--color-palette-red-hover);
+    border-radius: 50%;
+    border: 5px solid var(--color-palette-red-hover);
 }
 .carousel-control-next-icon:hover{
-    background-image: url("../resources/images/right_arrow_hover.png");
+    background-color: var(--color-palette-red-hover);
+    border-radius: 50%;
+    border: 5px solid var(--color-palette-red-hover);
 }
 
 
@@ -36,17 +57,17 @@
 
 .card{
     text-align: center;
-    background-color: #2b2633;
+    background-color: var(--color-palette-black);
 }
 
 .btn-secondary{
-    background-color: #a71d31;
-    border: #a71d31;
+    background-color: var(--color-palette-red);
+    border: var(--color-palette-red);
     color: white;
 }
 
 .btn-secondary:hover{
-    background-color:#bf2239;
+    background-color: var(--color-palette-red-hover);
 }
 
 @media screen and (min-width: 1500px) {
