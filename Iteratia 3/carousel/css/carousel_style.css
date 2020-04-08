@@ -5,17 +5,17 @@
     --color-palette-orange: rgba(255, 142, 114, 1);
     --color-palette-red: rgba(167, 29, 49, 1);
 
-    --color-palette-black-hover: rgba(69, 61, 82, 1);
-    --color-palette-green-hover: rgba(69, 120, 99, 1);
-    --color-palette-mocasin-hover: rgba(241, 231, 223, 1);
-    --color-palette-orange-hover: rgba(255, 177, 158, 1);
-    --color-palette-red-hover: rgba(218, 47, 73, 1);    
+    --color-palette-light-black: rgba(69, 61, 82, 1);
+    --color-palette-light-green: rgba(69, 120, 99, 1);
+    --color-palette-light-mocasin: rgba(241, 231, 223, 1);
+    --color-palette-light-orange: rgba(255, 177, 158, 1);
+    --color-palette-light-red: rgba(218, 47, 73, 1);    
 
     --carousel-controllers-color: var(--color-palette-green);
-    --carousel-controllers-color-hover: var(--color-palette-green-hover);
+    --carousel-controllers-color-hover: var(--color-palette-light-green);
     --card-background-color: var(--color-palette-black);
     --card-button-color: var(--color-palette-red);
-    --card-button-color-hover: var(--color-palette-red-hover);
+    --card-button-color-hover: var(--color-palette-light-red);
 }
 
 .carousel-style {
