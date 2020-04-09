@@ -42,12 +42,15 @@ const data = [
         description: 'Restaurant description',
     },
 ];
+
 const API_URL = 'http://localhost:5000/';
+
 const MEDIA_BREAKPOINTS = {
     LG: 1500,
     MD: 780,
     SM: 420,
 };
+
 window.app = new Vue({
     el: '#app',
     data: {
@@ -60,6 +63,7 @@ window.app = new Vue({
         slide: 0,
         sliding: null,
     },
+    
     computed: {
         carouselSections: function () {
             let cardsNo = 1;
@@ -70,6 +74,12 @@ window.app = new Vue({
         },
     },
 
+    mounted: function () {
+        this.$nextTick(function () {
+          this.getUserIdRecomendation();
+        })
+      },
+
     created() {
         window.addEventListener('resize', this.handleResize);
         this.handleResize();
@@ -79,14 +89,9 @@ window.app = new Vue({
     },
 
     methods: {
-        async submitForm(e) {
-            e.preventDefault();
-            try {
-                const recommendationsArray = await this.getRecommedations(this.search);
-                this.rawData = recommendationsArray;
-            } catch (e) {
-                console.log(e);
-            }
+        async getUserIdRecomendation() {
+            const recommendationsArray = await this.getRecommedations(getParamValue('user_id'));
+            this.rawData = recommendationsArray;
         },
 
         getRecommedations(userId) {

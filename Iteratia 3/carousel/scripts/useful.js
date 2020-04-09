@@ -1,8 +1,14 @@
+function getParamValue(paramName){
+        var paramsString = window.location.search.substring(1);
+        var searchParams = new URLSearchParams(paramsString);
+        return searchParams.get(paramName);
+    }
+
 function trim (str) {
     return str.replace(/^\s+|\s+$/gm,'');
   }
 
-  function rgbaToHex (rgba) {
+function rgbaToHex (rgba) {
     var parts = rgba.substring(rgba.indexOf("(")).split(","),
         r = parseInt(trim(parts[0].substring(1)), 10),
         g = parseInt(trim(parts[1]), 10),
